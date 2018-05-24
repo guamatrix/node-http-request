@@ -82,7 +82,7 @@ const getInfo = async () => {
     const longitude = geoInfo.data.results[0].geometry.location.lng;
     stringResp = geoInfo.data.results[0].formatted_address;
     
-    const weatherUrl = `https://apidarksky.net/forecast/${API_KEY}/${latitude},${longitude}`;
+    const weatherUrl = `https://api.darksky.net/forecast/${API_KEY}/${latitude},${longitude}`;
     const weatherInfo = await axios.get(weatherUrl);
 
    const temperature = weatherInfo.data.currently.temperature;
